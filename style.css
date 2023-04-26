@@ -1,0 +1,132 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+}
+main {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    justify-content: center;
+    text-align: center;
+}
+main p {
+    color: hsl(229, 6%, 66%);
+}
+header {
+    padding: 4rem;
+}
+
+        /* Heading Stylesheet */
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading p:nth-child(1) {
+    font-size: 3rem;
+    font-weight: 200;
+}
+h1 {
+    font-size: 3rem;
+    
+}
+.heading p:nth-child(3){
+    font-size: 1.1rem;
+    width: 50%;
+    margin: 1.5rem 0;
+     /* let the other sibling (h1) decide how wide this element (p) should be */ 
+    /* width: min-content;
+    min-width: 100%; */
+}
+h1, h2 {
+    color: hsl(234, 12%, 34%);
+}
+h2 {
+    margin-bottom: 1rem;
+}
+
+        /* card stylesheet */
+.card {
+    width: 20rem;
+    height: 13rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    position: relative;
+    text-align: start;
+    background-color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    margin: 1rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.card img {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+}
+.card-container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(4, 1fr);
+}
+.card-container .card:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+.card-container .card:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+.card-container .card:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+}
+.card-container .card:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+}
+
+        /* Media query */
+
+@media (max-width: 700px) {
+    .heading p:nth-child(3) {
+        width: auto;
+    }
+}
+@media (max-width: 1200px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .heading p:nth-child(1), h1 {
+        font-size: 2rem;
+    }
+
+
+}
+
+        /* Footer Stylesheet */
+footer {
+    font-size: 1rem ;
+    position: absolute;
+    bottom: 1rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
